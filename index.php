@@ -29,65 +29,71 @@
 		<td></td>
 	</tr>
 <script type="text/javascript">
-	var Fenetre = {
-		var fenetre = {};
-		fenetre.lancerPartie = function(){
-			Partie.plateauDeJeu = [][];
+	function Fenetre() {
+		this.lancerPartie = function(){
+			Partie.plateauDeJeu = new Array();
 		};
-		fenetre.creerJoueur = function(){
+		this.creerJoueur = function(){
+			
+		};
+		this.rejouerPartie = function(){
 
 		};
-		fenetre.rejouerPartie = function(){
-
-		};
-		fenetre.panneauGrille = [];
-		fenetre.panneauScore = [];
-		return fenetre;
+		this.panneauGrille = [];
+		this.panneauScore = [];
 	};
-	var Partie = {
-		var plateauDeJeu = [][];
-		var addAction = function(){
-
-		};
-		var getAction = function(){
-
-		};
-		var getActions = function(){
-
-		};
-		var getGames = function(){
-
-		};
-		var play = function(x, y, marque){
-
-		};
-
-	};
-	var tabCase = {
+	function Partie(){
 		
+		this.plateauDeJeu = new Array();
+		for(var i = 0; i<3; i++){
+			plateauDeJeu[i] = new Array();
+			for(var j = 0; j < 3; j++){
+				plateauDeJeu[i][j] = new cCase();
+			}
+		}
+		this.addAction = function(){
+
+		};
+		this.getAction = function(){
+
+		};
+		this.getActions = function(){
+
+		};
+		this.getGames = function(){
+			return this.plateauDeJeu;
+		};
+		this.play = function(x, y, marque){
+			this.plateauDeJeu[i][y].contenu = marque;
+		};
+
 	};
-	var cCase = {
-			var contenu = new Marque();
+	function cCase(){
+		this.contenu = new Marque();
 	};
-	var Marque = {
-		var character;
-		var getImage = function(){
+	function Marque() {
+		this.character;
+		this.etImage = function(){
 
 		};
 	};
-	var ControleurDeJeu = {
-		var checkVictory = function(){
+	function ControleurDeJeu() {
+		this.checkVictory = function(){
 
 		};
-		var ajouterMarque = function(j, x, y){
+		this.ajouterMarque = function(j, x, y){
 
 		};
-		var ajouterPoint = function(j){
+		this.ajouterPoint = function(j){
 
 		};
-		var play = function(){
+		this.play = function(){
 
 		};
+	};
+	function Joueur(){
+		this.Nom;
+		this.Score;
 	}
 </script>
 </table>
