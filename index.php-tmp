@@ -32,7 +32,7 @@
 	var Fenetre = {
 		var fenetre = {};
 		fenetre.lancerPartie = function(){
-
+			Partie.plateauDeJeu = [][];
 		};
 		fenetre.creerJoueur = function(){
 
@@ -45,9 +45,7 @@
 		return fenetre;
 	};
 	var Partie = {
-		var plateauDeJeu = [][]
-
-		};
+		var plateauDeJeu = [][];
 		var addAction = function(){
 
 		};
@@ -69,11 +67,25 @@
 
 	};
 	var cCase = {
-
+			var contenu = new Marque();
 	};
 	var Marque = {
 		var character;
 		var getImage = function(){
+
+		};
+	};
+	var ControleurDeJeu = {
+		var checkVictory = function(){
+
+		};
+		var ajouterMarque = function(j, x, y){
+
+		};
+		var ajouterPoint = function(j){
+
+		};
+		var play = function(){
 
 		};
 	}
